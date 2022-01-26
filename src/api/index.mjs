@@ -74,6 +74,6 @@ app.post("/checkout", async (req, res) => {
   res.json(session);
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(8000, () => {
   console.log("App is running!");
 });
