@@ -1,0 +1,22 @@
+.wrapper {
+  animation: 0.2s "fade-in" linear;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  min-height: 350px;
+}
+
+.wrapper[data-opaque] {
+  opacity: 1;
+}
+
+.wrapper[data-translucent] {
+  opacity: 0.4;
+}

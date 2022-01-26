@@ -1,0 +1,32 @@
+.notification {
+  align-items: center;
+  box-shadow: 0px 0px 4px #7c818b;
+  border-radius: 2px;
+  color: var(--text-light);
+  display: grid;
+  font-size: 12px;
+  gap: 7px;
+  grid: auto / auto-flow;
+  padding: 10px;
+  position: fixed;
+  right: 50%;
+  top: 100px;
+  transform: translateX(50%);
+  width: 75%;
+  z-index: 100; /* This is the max z-index we'll ever have to go */
+}
+
+@media (min-width: 1008px) {
+  .notification {
+    width: auto;
+    top: 50px;
+  }
+}
+
+.success {
+  background: var(--bg-success);
+}
+
+.error {
+  background: var(--bg-danger);
+}

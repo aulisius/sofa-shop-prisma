@@ -1,0 +1,111 @@
+.modalFlex {
+  display: flex;
+  justify-content: space-between;
+  flex: auto;
+}
+.modalContent {
+  flex: auto;
+  padding: 28px 30px 30px;
+}
+
+.modalContent[data-secure="true"] {
+  padding: 27px 30px 30px;
+}
+
+.modalContent > h4 {
+  padding: 1px 0 5px;
+}
+
+.modalContent > p {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.modalActions {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.mainContent {
+  position: relative;
+  margin: 25px 12px 0;
+}
+.mainContent[data-expand-horizontal="true"] {
+  margin: 25px 0 0;
+}
+.mainContent[data-use-border="true"] {
+  border: 1px solid rgb(233, 233, 235);
+  border-radius: 2px;
+  padding: 23px 25px 11px;
+}
+.aside {
+  background: var(--bg-grey);
+  font-size: 12px;
+  padding: 25px 30px;
+  width: 30%;
+  border-radius: 0 2px 2px 0;
+  min-width: 198px;
+  word-break: break-word;
+}
+.aside p {
+  color: rgb(105, 116, 137);
+  margin-bottom: 12px;
+  line-height: 18px;
+}
+.aside strong {
+  display: inline-block;
+  font-weight: 600;
+}
+[data-reach-dialog-overlay].dialogOverlay {
+  position: fixed;
+  background: rgba(28, 31, 39, 0.8);
+  width: 100%;
+  height: 100%;
+  animation: 0.2s "fade-in" linear;
+  z-index: 90;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  align-items: flex-start;
+}
+[data-reach-dialog-content].dialogContent {
+  position: relative;
+  border-radius: 2px;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+}
+.close {
+  position: absolute;
+  color: var(--text-light);
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  top: -16px;
+  right: -30px;
+}
+.secure {
+  border: 2px var(--bg-success) solid;
+  border-bottom: 28px var(--bg-success) solid;
+  border-radius: 2px;
+  position: relative;
+}
+.secure:before {
+  content: "This Window is secured with 256 bit encryption";
+  position: absolute;
+  color: var(--text-light);
+  bottom: -22px;
+  left: 30px;
+  font-family: var(--font-bodytext);
+  font-size: 11px;
+}
+.secure:after {
+  content: "";
+  background: no-repeat center/12px
+    url("data:image/svg+xml,%3Csvg width='13' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.8868 1C4.694 1 2.9116 2.7823 2.9116 4.9751v1.9173H1.6747c-.371 0-.6747.3036-.6747.6747v6.7301c0 .3711.3036.6747.6747.6747h10.4297c.3711 0 .6747-.3036.6747-.6747V7.5727c0-.371-.3036-.6747-.6747-.6747h-1.2369V4.9807C10.8675 2.788 9.0795 1 6.8868 1zM4.261 4.9807c0-1.4506 1.1808-2.6257 2.6258-2.6257 1.445 0 2.6256 1.1807 2.6256 2.6257V6.898H4.261V4.9807zm-1.9116 8.6418h9.0803V8.2418H2.3494v5.3807z' fill='%23fff'/%3E%3Cpath d='M2.9116 6.8924v.175h.175v-.175h-.175zm7.9559.0056h-.175v.175h.175v-.175zm-1.355 0v.175h.175v-.175h-.175zm-5.2515 0h-.175v.175h.175v-.175zm7.1687 6.7245v.175h.175v-.175h-.175zm-9.0803 0h-.175v.175h.175v-.175zm9.0803-5.3807h.175v-.175h-.175v.175zm-9.0803 0v-.175h-.175v.175h.175zm.7372-3.2667c0-2.0961 1.704-3.8001 3.8002-3.8001v-.35c-2.2895 0-4.1502 1.8607-4.1502 4.1501h.35zm0 1.9173V4.975h-.35v1.9173h.35zm-1.4119.175h1.237v-.35h-1.237v.35zm-.4997.4997c0-.2745.2253-.4997.4997-.4997v-.35c-.4677 0-.8497.382-.8497.8497h.35zm0 6.7301V7.5671h-.35v6.7301h.35zm.4997.4997c-.2744 0-.4997-.2253-.4997-.4997h-.35c0 .4677.382.8497.8497.8497v-.35zm10.4297 0H1.6747v.35h10.4297v-.35zm.4997-.4997c0 .2744-.2252.4997-.4997.4997v.35c.4678 0 .8497-.382.8497-.8497h-.35zm0-6.7245v6.7245h.35V7.5727h-.35zm-.4997-.4997c.2745 0 .4997.2253.4997.4997h.35c0-.4677-.3819-.8497-.8497-.8497v.35zm-1.2369 0h1.2369v-.35h-1.2369v.35zm-.175-2.0923V6.898h.35V4.9807h-.35zM6.8867 1.175c2.0962 0 3.8058 1.7096 3.8058 3.8057h.35c0-2.2894-1.8663-4.1557-4.1558-4.1557v.35zm0 1.005c-1.5413 0-2.8007 1.2532-2.8007 2.8007h.35C4.436 3.627 5.5382 2.53 6.8868 2.53v-.35zm2.8007 2.8007c0-1.5416-1.259-2.8007-2.8007-2.8007v.35c1.3484 0 2.4508 1.1024 2.4508 2.4507h.35zm0 1.9173V4.9807h-.35V6.898h.35zm-5.4264.175h5.2514v-.35H4.261v.35zm-.175-2.0923V6.898h.35V4.9807h-.35zm7.3437 8.4668H2.3494v.35h9.0803v-.35zm-.175-5.2057v5.3807h.35V8.2418h-.35zm-8.9053.175h9.0803v-.35H2.3494v.35zm.175 5.2057V8.2418h-.35v5.3807h.35z' fill='%2328BD8B'/%3E%3C/svg%3E");
+  width: 12px;
+  height: 14px;
+  position: absolute;
+  bottom: -21px;
+  left: 10px;
+}

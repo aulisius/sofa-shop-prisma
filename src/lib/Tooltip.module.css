@@ -1,0 +1,15 @@
+.tooltip {
+  font-family: var(--font-bodytext);
+  font-size: 11px;
+  color: var(--text-light);
+  background-color: rgb(59, 62, 71);
+  border: none;
+  border-radius: 2px;
+  position: absolute;
+  margin-top: -2px;
+  padding: 6px 15px 8px;
+  line-height: 17px;
+  white-space: pre-line;
+  text-align: left;
+  z-index: 100;
+}
